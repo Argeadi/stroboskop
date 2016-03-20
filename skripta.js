@@ -42,7 +42,12 @@ window.addEventListener('load', function() {
 	}
 	
 	var stop = function(event) {
-		ustavi = true;
+		//ustavi = true;
+		var start = document.querySelector("#start");
+		start.innerHTML = "Zazeni stroboskop";
+		start.removeEventListener('click', stop);
+		start.addEventListener('click', zagon);
+	//	ustavi = true;
 	}
 	
 	var zagon = function(event) {
@@ -64,5 +69,6 @@ window.addEventListener('load', function() {
 	}
 	
 	document.querySelector("#start").addEventListener('click', zagon);
+	//document.querySelector("")
 	
 });
